@@ -4,6 +4,9 @@ import About from "./About";
 import Resume from "./Resume";
 import Services from "./Services";
 import Skills from "./Skills";
+import Portifolio from "./Portifolio";
+import Testimonials from "./Testimonials";
+import Contact from "./Contact";
 
 const Content = () => {
   return (
@@ -13,9 +16,9 @@ const Content = () => {
       <Resume />
       <Services />
       <Skills />
-      {/*<Portifolio/>
-        <Testimonials/>
-        <Contact/> */}
+      <Portifolio />
+      <Testimonials />
+      <Contact />
     </div>
   );
 };
