@@ -27,17 +27,50 @@ const Hero = () => {
           <h1 className="font-normal text-xs">INTRODUCE</h1>
         </div>
       </div>
-      <div className="">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          delay: 0.6,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className=""
+      >
         <h1 className="font-normal text-6xl text-[#fff] mb-10">
           Im a <span className="text-primary-color">Matheus</span>, <br /> im a
           fullstack developer
         </h1>
         <span className="text-[#565656] font-normal text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-          veritatis dolorem rerum iste voluptates
+          Sou um desenvolvedor web especializado em Next.js e Node.js. Minha
+          paixão é criar aplicativos web rápidos e eficientes. Se você procura
+          alguém para projetar e desenvolver soluções web de alta qualidade,
+          estou aqui para ajudar.
         </span>
-      </div>
-      <div className="justify-end flex">
+      </motion.div>
+      <div className="justify-between  flex">
+        <div className="flex gap-20 ml-10">
+          <div className="justify-center items-center">
+            <div className="flex justify-center items-center">
+              <motion.h1 className="text-6xl">{Project}</motion.h1>
+              <h1 className="text-7xl">+</h1>
+            </div>
+            <span className="text-[#565656] ">
+              Project
+              <br /> Complete
+            </span>
+          </div>
+          <div className="justify-center items-center">
+            <div className="flex justify-center items-center">
+              <motion.h1 className="text-6xl">{Years}</motion.h1>
+              <h1 className="text-7xl">+</h1>
+            </div>
+            <span className="text-[#565656] ">
+              Years of
+              <br /> Experience
+            </span>
+          </div>
+        </div>
         <div className="items-center">
           <Link
             href={"#about"}
@@ -46,28 +79,6 @@ const Hero = () => {
             <Image src={mRounded} alt="" className="animate-spin-slow" />
             <ArrowRight size={40} className="absolute text-[#fff] " />
           </Link>
-        </div>
-      </div>
-      <div className="flex gap-20 ml-10">
-        <div className="justify-center items-center">
-          <div className="flex justify-center items-center">
-            <motion.h1 className="text-6xl">{Project}</motion.h1>
-            <h1 className="text-7xl">+</h1>
-          </div>
-          <span className="text-[#565656] ">
-            Project
-            <br /> Complete
-          </span>
-        </div>
-        <div className="justify-center items-center">
-          <div className="flex justify-center items-center">
-            <motion.h1 className="text-6xl">{Years}</motion.h1>
-            <h1 className="text-7xl">+</h1>
-          </div>
-          <span className="text-[#565656] ">
-            Years of
-            <br /> Experience
-          </span>
         </div>
       </div>
     </section>
