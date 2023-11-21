@@ -1,27 +1,70 @@
-import { User2 } from "lucide-react";
+"use client";
+import { User2, UserCog2 } from "lucide-react";
 import React from "react";
+import SkillCard from "./cards/SkillCard";
+
+import { motion } from "framer-motion";
 
 const Skills = () => {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const companies = [
+    { ImageSrc: "/assets/skills/figma.png", number: "50%" },
+    { ImageSrc: "/assets/skills/javascript.png", number: "70%" },
+    { ImageSrc: "/assets/skills/mongodb.png", number: "50%" },
+    { ImageSrc: "/assets/skills/nestjs.png", number: "60%" },
+    { ImageSrc: "/assets/skills/nextjs.png", number: "80%" },
+    { ImageSrc: "/assets/skills/nodejs.png", number: "70%" },
+    { ImageSrc: "/assets/skills/postgresql.png", number: "70%" },
+    { ImageSrc: "/assets/skills/react.png", number: "80%" },
+  ];
   return (
     <section className="w-full flex flex-col  p-16 gap-10">
       <div className="flex text-[#565656] ">
-        <div className="border rounded-full items-center flex p-1 gap-2">
-          <User2 size={15} />
-          <h1 className="font-normal text-xs">ABOUT</h1>
+        <div className="flex text-[#565656] ">
+          <div className="border rounded-full items-center flex p-1 gap-2">
+            <UserCog2 size={15} />
+            <h1 className="mr-1">Skills</h1>
+          </div>
         </div>
       </div>
       <div className="">
         <h1 className="font-normal text-6xl text-[#fff] mb-10">
-          Im a <span className="text-primary-color">Matheus</span>, <br /> im a
-          fullstack developer
+          My <span className="text-primary-color">Advantages</span>
         </h1>
-        <div className=" grid grid-cols-4 gap-20">
-          <SkillCard />
-          <SkillCard />
-          <SkillCard />
-          <SkillCard />
-          <SkillCard />
-          <SkillCard />
+        <div className=" ">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="justify-start grid grid-cols-4 gap-20 "
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+          >
+            {companies.map((props, index) => (
+              <motion.div key={index} className="item" variants={item}>
+                <SkillCard ImageSrc={props.ImageSrc} Number={props.number} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
@@ -29,16 +72,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-const SkillCard = ({}) => {
-  return (
-    <div className="text-[#565656] items-center border rounded-full p-20 justify-center hover:border-primary-color">
-      <div className="">
-        <User2 size={50} />
-      </div>
-      <div className="mt-20">
-        <span className="text-[#fff] font-medium text-base">94</span>
-      </div>
-    </div>
-  );
-};

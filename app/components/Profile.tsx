@@ -1,10 +1,15 @@
-"use-client";
+"use client";
+
 import Image from "next/image";
 import { Github, Instagram, Twitter, Mail } from "lucide-react";
 import { mLogo, mPhoto } from "../../public/assets/index";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { themeChange } from "theme-change";
+import ThemeChange from "./theme/ThemeChange";
 
 const Profile = () => {
+  useEffect(() => {}, []);
   return (
     <div className="justify-center items-center border rounded-lg  p-10 gap-4 text-[#565656]">
       <Image src={mLogo} alt="" />
@@ -36,13 +41,9 @@ const Profile = () => {
           {" "}
           <Twitter size={50} className="border rounded-full p-2" />
         </Link>
-      </div>
-      <div className="flex justify-center items-center mt-4">
-        <button className=" flex bg-primary-color rounded-full w-full h-full p-4 justify-center items-center gap-2 text-background">
-          {" "}
-          <Mail size={20} />
-          <span className="font-semibold">HIRE ME!</span>
-        </button>
+        <div>
+          <ThemeChange />
+        </div>
       </div>
     </div>
   );

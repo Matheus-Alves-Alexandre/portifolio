@@ -1,22 +1,24 @@
 "use client";
-import { Home, User2 } from "lucide-react";
+import { motion, Variants } from "framer-motion";
 import React from "react";
-
-import { motion, inView } from "framer-motion";
-import { staggerContainer } from "../../utils/motion";
+import { User2 } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="w-full flex flex-col  p-16 gap-10">
+    <section className="w-full flex flex-col p-16 gap-10">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        viewport={{ once: false, amount: 0.25 }}
+        transition={{
+          duration: 1,
+          delay: 0.6,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
       >
         <div className="flex text-[#565656] ">
           <div className="border rounded-full items-center flex p-1 gap-2">
             <User2 size={15} />
-            <h1 className="font-normal text-xs">ABOUT</h1>
+            <h1 className="mr-1">About</h1>
           </div>
         </div>
         <div className="">

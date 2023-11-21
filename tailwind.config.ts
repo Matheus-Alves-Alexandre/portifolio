@@ -7,10 +7,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      background: "#1F1F1F",
-      "primary-color": "#FFC561",
-    },
     screens: {
       sm: "320px",
       md: "810px",
@@ -23,5 +19,23 @@ const config: Config = {
   },
 
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      "dark",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "forest",
+      "lofi",
+      "black",
+      "luxury",
+      "dracula",
+      "business",
+      "night",
+      "coffee",
+    ],
+  },
 };
 export default config;
