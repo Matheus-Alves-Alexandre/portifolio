@@ -56,7 +56,15 @@ const Portifolio = () => {
           {port.map((props) => (
             <div key={props.id}>
               <button
-                onClick={() => document.getElementById(props.id).showModal()}
+                onClick={() => {
+                  const dialogElement = document.getElementById(
+                    props.id
+                  ) as HTMLDialogElement | null;
+
+                  if (dialogElement) {
+                    dialogElement.showModal();
+                  }
+                }}
               >
                 <div className="card w-96 bg-base-100 shadow-xl gap-5 mt-5">
                   <figure>

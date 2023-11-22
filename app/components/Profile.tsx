@@ -41,9 +41,7 @@ const Profile = () => {
           {" "}
           <Twitter size={50} className="border rounded-full p-2" />
         </Link>
-        <div>
-          <ThemeChange />
-        </div>
+        <div>{/*  <ThemeChange /> */}</div>
       </div>
     </div>
   );
