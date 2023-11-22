@@ -8,7 +8,7 @@ type Skills = {
 
 const SkillCard: React.FC<Skills> = ({ ImageSrc, Number }) => {
   return (
-    <div className="text-[#565656] items-center border rounded-full p-20 justify-center hover:border-primary-color">
+    <div className="text-[#565656] items-center border rounded-full sm:p-20 md:p-14 lg:p-14  xl:p-14 justify-center hover:border-primary-color">
       <div className="">
         <Image
           src={ImageSrc}

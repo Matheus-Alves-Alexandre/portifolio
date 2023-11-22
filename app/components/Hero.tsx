@@ -48,7 +48,7 @@ const Hero = () => {
           estou aqui para ajudar.
         </span>
       </motion.div>
-      <div className="justify-between  flex">
+      <div className="justify-between  flex sm:text-xl sm:-ml-10">
         <div className="flex gap-20 ml-10">
           <div className="justify-center items-center">
             <div className="flex justify-center items-center">
@@ -74,7 +74,7 @@ const Hero = () => {
         <div className="items-center">
           <Link
             href={"#about"}
-            className=" relative items-center flex justify-center  "
+            className=" relative items-center flex justify-center sm:hidden "
           >
             <Image src={mRounded} alt="" className="animate-spin-slow" />
             <ArrowRight size={40} className="absolute text-[#fff] " />

@@ -47,7 +47,7 @@ const Skills = () => {
         </div>
       </div>
       <div className="">
-        <h1 className="font-normal text-6xl text-[#fff] mb-10">
+        <h1 className="font-normal text-6xl text-[#fff] mb-10 sm:text-3xl  md:text-6xl  lg:text-6xl   xl:text-6xl">
           My <span className="text-primary-color">Advantages</span>
         </h1>
         <div className=" ">
@@ -55,7 +55,7 @@ const Skills = () => {
             variants={container}
             initial="hidden"
             animate="visible"
-            className="justify-start grid grid-cols-4 gap-20 "
+            className="justify-start grid gap-20 sm:grid-cols-1  md:grid-cols-4  lg:grid-cols-4   xl:grid-cols-4 "
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
           >

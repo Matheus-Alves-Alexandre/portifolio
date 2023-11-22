@@ -49,7 +49,7 @@ const Resume = () => {
         </div>
       </div>
       <div className="">
-        <h1 className="font-normal text-6xl text-[#fff] mb-10">
+        <h1 className="font-normal text-6xl text-[#fff] mb-10 sm:text-3xl  md:text-6xl  lg:text-6xl   xl:text-6xl">
           Education & <span className="text-primary-color">Experience</span>
         </h1>
         <motion.div

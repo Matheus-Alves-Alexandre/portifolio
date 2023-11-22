@@ -49,10 +49,10 @@ const Portifolio = () => {
         </div>
       </div>
       <div className="">
-        <h1 className="font-normal text-6xl text-[#fff] mb-10">
+        <h1 className="font-normal text-6xl text-[#fff] mb-10 ">
           Featured <span className="text-primary-color">Project</span>
         </h1>
-        <div className="grid grid-cols-2">
+        <div className="grid  sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-2  xl:grid-cols-2  ">
           {port.map((props) => (
             <div key={props.id}>
               <button
@@ -66,7 +66,7 @@ const Portifolio = () => {
                   }
                 }}
               >
-                <div className="card w-96 bg-base-100 shadow-xl gap-5 mt-5">
+                <div className="card  bg-base-100 shadow-xl gap-5 mt-5 sm:w-80 md:w-96  lg:w-96  xl:w-96 ">
                   <figure>
                     <Image
                       src={props.ImageSrc}

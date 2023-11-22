@@ -51,9 +51,8 @@ const Services = () => {
         </div>
       </div>
       <div className="">
-        <h1 className="font-normal text-6xl text-[#fff] mb-10">
-          My Specializations{" "}
-          <span className="text-primary-color">Specializations</span>
+        <h1 className="font-normal text-6xl text-[#fff] mb-10 sm:text-3xl  md:text-6xl  lg:text-6xl   xl:text-6xl">
+          My <span className="text-primary-color">Specializations</span>
         </h1>
         <div className="">
           <motion.div
